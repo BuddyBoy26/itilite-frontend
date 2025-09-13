@@ -54,7 +54,7 @@ export default function Footer() {
 
               <div className="mt-6 flex items-center space-x-4">
                 {/* badges horizontally, wrap on small screens */}
-                <div className="flex space-x-4 flex-wrap">
+                <div className="flex space-x-4">
                   <div className="w-16 h-16 relative">
                     <Image
                       src={ItiliteImage1}
