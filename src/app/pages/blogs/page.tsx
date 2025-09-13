@@ -56,7 +56,7 @@ const DropDownFilters = [
   },
   {
     name: "In News",
-    value: "in-news",
+    value: "In-news",
     id: 4,
   },
   {
