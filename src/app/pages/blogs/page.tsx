@@ -176,7 +176,7 @@ const Blogs = () => {
               {DropDownFilters.map((filter) => (
                 <div
                   key={filter.id}
-                  className="py-2 px-2"
+                  className="py-2 px-2 hover:text-orange-400"
                   id={`${filter.id}`}
                   onClick={handleFilterClick}
                 >
