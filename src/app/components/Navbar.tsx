@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,8 +11,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-orange-600">
-          itilite
+        <Link href="C:\Users\HP\Downloads\Logo-2.svg" className="text-2xl font-bold text-orange-600">
+          <Image
+          src="/Logo-2.svg"   
+          alt="Company Logo"
+          width={120}
+          height={40}
+          priority
+        />
         </Link>
 
         {/* Desktop Menu */}

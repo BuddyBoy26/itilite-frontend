@@ -1,12 +1,18 @@
 import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import FeaturesSection from "./components/FeaturesSection";
+import Testimonials from "./components/Testimonials";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const Home = () => {
   return (
-    <html lang="en">
-      <body>
+        <>
         <Navbar />
-        {children}
-      </body>
-    </html>
+        
+        <HeroSection />
+        <FeaturesSection />
+        <Testimonials />
+        </>
   );
 }
+
+export default Home;
