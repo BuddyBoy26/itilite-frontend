@@ -10,7 +10,7 @@ type YtVideoProps = {
 const YtVideo: React.FC<YtVideoProps> = ({ url, title }) => {
   return (
     <section className="w-full flex justify-center my-12 px-4">
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-4xl"> {/* max width adjusted here */}
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">{title}</h2>
 
         {/* Responsive aspect ratio for video */}
