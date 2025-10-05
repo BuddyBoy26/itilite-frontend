@@ -3,18 +3,11 @@ import { Volume2 } from "lucide-react";
 
 function Story() {
   return (
-    <section className="min-h-screen bg-gray-50 py-16 px-6 lg:px-12 relative overflow-hidden">
+    <section className="min-h-screen bg-gray-100 py-16 px-6 lg:px-12 relative overflow-hidden">
       <div className="container mx-auto max-w-5xl relative">
-        {/* Decorative Profile Images */}
-        {/* Top Left */}
-        <div className="absolute -left-12 top-20 lg:left-0 lg:top-32 animate-float">
-          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-purple-200 border-4 border-white shadow-lg overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-br from-purple-300 to-purple-400" />
-          </div>
-        </div>
 
         {/* Main Content */}
-        <div className="relative z-10 bg-white rounded-2xl shadow-sm p-8 lg:p-12">
+        <div className="relative z-10 bg-gray-50 rounded-2xl shadow-sm p-8 lg:p-12">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-light text-gray-500 mb-6">

@@ -4,6 +4,7 @@ import Customers from "./Customers";
 import HeroSection from "./HeroSection";
 import Investors from "./Investors";
 import Story from "./Story";
+import Trust from "./Trust";
 
 const AboutUs = () => {
   return ( 
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <Story />
       <Investors />
       <Customers />
+      <Trust />
     </div>
    );
 }

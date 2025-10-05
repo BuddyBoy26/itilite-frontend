@@ -30,7 +30,6 @@ const CountUpNumber = ({ end, suffix = '', duration = 2000 }) => {
     if (!isVisible) return;
 
     const startTime = Date.now();
-    const endTime = startTime + duration;
 
     const updateCount = () => {
       const now = Date.now();
@@ -66,7 +65,7 @@ export default function CustomerStats() {
         
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-light text-gray-700">
             Our customers love us
           </h2>
         </div>
@@ -76,30 +75,30 @@ export default function CustomerStats() {
           
           {/* Stat 1 - Delighted Users */}
           <div className="text-center space-y-4 group">
-            <div className="text-5xl lg:text-6xl font-light text-gray-900 transition-transform duration-300 group-hover:scale-110">
+            <div className="text-5xl lg:text-6xl font-light text-gray-700 transition-transform duration-300 group-hover:scale-110">
               <CountUpNumber end={600} suffix="K+" duration={2500} />
             </div>
-            <p className="text-lg lg:text-xl text-gray-700 font-light">
+            <p className="text-lg lg:text-xl text-gray-600 font-light">
               Delighted<br />users
             </p>
           </div>
 
           {/* Stat 2 - Trips Booked */}
           <div className="text-center space-y-4 group">
-            <div className="text-5xl lg:text-6xl font-light text-gray-900 transition-transform duration-300 group-hover:scale-110">
+            <div className="text-5xl lg:text-6xl font-light text-gray-700 transition-transform duration-300 group-hover:scale-110">
               <CountUpNumber end={1} suffix="M+" duration={2500} />
             </div>
-            <p className="text-lg lg:text-xl text-gray-700 font-light">
+            <p className="text-lg lg:text-xl text-gray-600 font-light">
               Trips<br />booked
             </p>
           </div>
 
           {/* Stat 3 - Global Inventory */}
           <div className="text-center space-y-4 group">
-            <div className="text-5xl lg:text-6xl font-light text-gray-900 transition-transform duration-300 group-hover:scale-110">
+            <div className="text-5xl lg:text-6xl font-light text-gray-700 transition-transform duration-300 group-hover:scale-110">
               <CountUpNumber end={3} suffix="M+" duration={2500} />
             </div>
-            <p className="text-lg lg:text-xl text-gray-700 font-light">
+            <p className="text-lg lg:text-xl text-gray-600 font-light">
               Global<br />inventory
             </p>
           </div>

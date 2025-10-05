@@ -5,7 +5,7 @@ import heroImage from "../../../../public/about-us-hero-img.webp"; // Placeholde
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen from-gray-900 via-gray-800 to-gray-900 bg-[#232323] text-white">
+    <section className="min-h-screen from-gray-900 via-gray-800 to-gray-900 bg-[#232323] text-gray-100">
       <div className="container max-w-7xl mx-auto px-6 py-8 md:py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[80vh]">
           {/* Left Content */}
