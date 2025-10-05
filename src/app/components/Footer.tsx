@@ -34,7 +34,7 @@ export default function Footer() {
   const contactLinks = ["Contact Us", "Help Center"];
 
   return (
-    <footer className="bg-gray-50 text-gray-600">
+    <footer className="bg-gray-100 text-gray-600">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex justify-evenly gap-8">
           {/* Logo + badges */}

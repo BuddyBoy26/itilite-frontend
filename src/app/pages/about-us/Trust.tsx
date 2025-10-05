@@ -74,7 +74,7 @@ const Trust = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
-    <section className="pt-20 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-[80vw] mx-auto">
         <h1 className="text-center text-4xl text-gray-700 mb-8">
           Why do Users choose Us to book travel and management expenses?
