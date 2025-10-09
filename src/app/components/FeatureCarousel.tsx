@@ -16,7 +16,7 @@ const carouselItems = [
     description:
       "Eliminate manual expense reports with AI-driven automation.",
     button: "Learn more",
-    image: "/expense-phone.png",
+    image: "/Expense-report-India-1.webp",
   },
   {
     title: "Unified travel & expense",
@@ -24,7 +24,7 @@ const carouselItems = [
     description:
       "Get a single platform for both travel and expense management with real-time insights.",
     button: "Learn more",
-    image: "/unified-phone.png",
+    image: "/Unified-travel-expense-India.webp",
   },
 ];
 
