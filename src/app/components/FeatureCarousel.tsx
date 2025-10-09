@@ -8,7 +8,7 @@ const carouselItems = [
     description:
       "Manage end-to-end corporate travel seamlessly with our integrated platform.",
     button: "Learn more",
-    image: "/travel-phone.png",
+    image: "/Corporate_travel.webp",
   },
   {
     title: "Expense management",
