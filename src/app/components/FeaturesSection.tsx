@@ -3,22 +3,22 @@ export default function FeaturesSection() {
     {
       title: "Travel Booking",
       description: "Flights, hotels, car rentals — all in one booking platform.",
-      icon: "/feature-1.png",
+      icon: "/TravelBooking.jpg",
     },
     {
       title: "Policy Compliance",
       description: "Ensure travel happens within your company policy rules.",
-      icon: "/feature-1.png",
+      icon: "/policyCompliance.png",
     },
     {
       title: "Expense Management",
       description: "Track, approve, and reimburse expenses seamlessly.",
-      icon: "/feature-1.png",
+      icon: "/ExpenseManagement.png",
     },
     {
       title: "Real-time Insights",
       description: "Monitor spend data live with dashboards and alerts.",
-      icon: "/feature-1.png",
+      icon: "/Real-Time.png",
     },
   ];
 

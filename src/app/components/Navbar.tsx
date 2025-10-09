@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <Link href="/">Home</Link>
-          <Link href="/overview">Overview</Link>
+          <Link href="/pages/about-us">About Us</Link>
           <Link href="/products">Products</Link>
           <Link href="/solutions">Solutions</Link>
           <Link href="/pricing">Pricing</Link>
