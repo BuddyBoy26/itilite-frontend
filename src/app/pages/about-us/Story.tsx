@@ -28,7 +28,7 @@ function Story() {
           {/* Content Placeholder */}
           <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
             <p>
-              There is a saying "best ideas come from personal pain points" and
+              There is a saying &quot;best ideas come from personal pain points&quot; and
               that is exactly how itilite came into being.
             </p>
 
@@ -52,13 +52,13 @@ function Story() {
               , wherein personal travel was becoming increasingly digital and
               seamless. However, business travel heavily relied on manual
               processes, complicated approval workflows, and there were no
-              effective cost control measures. That's when they knew that
+              effective cost control measures. That&apos;s when they knew that
               business travel needed to move towards technological processes,
               and they decided to define the problem further and solve it.
             </p>
 
             <p>
-              Here we are today with the team's relentless work to usher in an
+              Here we are today with the team&apos;s relentless work to usher in an
               era of transformation of business travel & expenses via products
               and processes, replacing the traditional travel desks and offline
               processes that prevailed earlier.

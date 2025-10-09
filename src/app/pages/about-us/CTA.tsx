@@ -21,7 +21,7 @@ const CTA = () => {
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-6xl font-serif text-gray-900 text-center mb-8 leading-tight">
-          Let's build the future of travel management together
+          Let&apos;s build the future of travel management together
         </h1>
 
         {/* Description */}

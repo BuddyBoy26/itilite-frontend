@@ -78,16 +78,18 @@ const Blogs = () => {
   const [dropDownFilterSelectedId, setDropDownFilterSelectedId] =
     useState<number>(0);
 
-  const handleFirstFilterClick = (e: any) => {
-    setfirstFilterActiveId(Number(e.target.id));
+  const handleFirstFilterClick = (
+  e: React.MouseEvent<HTMLButtonElement>
+): void => {
+    setfirstFilterActiveId(Number(e.currentTarget.id));
   };
 
   const handleDropDownFilterClick = () => {
     setDropDownFilterActive(!dropDownFilterActive);
   };
 
-  const handleFilterClick = (e: any) => {
-    setDropDownFilterSelectedId(Number(e.target.id));
+  const handleFilterClick = (e: React.MouseEvent<HTMLDivElement>): void => {
+    setDropDownFilterSelectedId(Number(e.currentTarget.id));
     setDropDownFilterActive(false);
   };
 

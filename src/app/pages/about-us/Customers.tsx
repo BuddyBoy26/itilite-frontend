@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-const CountUpNumber = ({ end, suffix = '', duration = 2000 }) => {
+const CountUpNumber = ({ end, suffix = '', duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
