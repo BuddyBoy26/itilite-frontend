@@ -245,7 +245,7 @@ export default function Blogs() {
                     • {new Date(blog.publishedAt).toLocaleDateString()}
                   </div>
                   <Link
-                    href={`/blogs/${blog.slug}`}
+                    href={`/pages/blogs/${blog.slug}`}
                     className="inline-block text-sm font-medium mt-2"
                     style={{ color: COLORS.primary }}
                   >
