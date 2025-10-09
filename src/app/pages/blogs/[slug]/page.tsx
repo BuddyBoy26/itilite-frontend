@@ -44,8 +44,12 @@ export default function BlogPage() {
         if (!res.ok) throw new Error("Failed to fetch blog");
         const data = await res.json();
         setBlog(data);
-      } catch (error: any) {
-        setErr(error.message);
+      } catch (e) {
+        if (e instanceof Error) {
+          setErr(e.message);
+        } else {
+          setErr("Unknown error");
+        }
       } finally {
         setLoading(false);
       }
