@@ -1,3 +1,5 @@
+"use client";
+
 import BestSoftware from "../../../../public/best-software-award.png";
 import HighPerformer from "../../../../public/high-performer-award.png";
 import CategoryLeader from "../../../../public/category-leader-award.webp";
@@ -11,36 +13,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const CompanyLogos = [
-  {
-    name: "TVS",
-    src: TVS,
-    height: 40,
-    id: 0,
-  },
-  {
-    name: "Intellect Designs",
-    src: Intellect,
-    height: 40,
-    id: 1,
-  },
-  {
-    name: "ITC Infotech",
-    src: Infotech,
-    height: 60,
-    id: 2,
-  },
-  {
-    name: "Datamatics",
-    src: Datamatics,
-    height: 30,
-    id: 3,
-  },
-  {
-    name: "Fashinza",
-    src: Fashinza,
-    height: 40,
-    id: 4,
-  },
+  { name: "TVS", src: TVS, height: 40, id: 0 },
+  { name: "Intellect Designs", src: Intellect, height: 40, id: 1 },
+  { name: "ITC Infotech", src: Infotech, height: 60, id: 2 },
+  { name: "Datamatics", src: Datamatics, height: 30, id: 3 },
+  { name: "Fashinza", src: Fashinza, height: 40, id: 4 },
 ];
 
 const Awards = [
@@ -71,113 +48,97 @@ const Awards = [
 ];
 
 const Trust = () => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-[80vw] mx-auto">
-        <h1 className="text-center text-4xl text-gray-700 mb-8">
-          Why do Users choose Us to book travel and management expenses?
+    <section className="py-20 bg-gray-50 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Heading */}
+        <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-12">
+          Why do users choose us to book travel and manage expenses?
         </h1>
 
-        <div className="flex justify-center m-4">
-          {/* Awards Section */}
+        {/* Awards Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {Awards.map((award) => (
             <div
               key={award.id}
-              className="w-[20vw] p-4 m-[1vw] mb-0 border-2 border-gray-300 rounded-lg shadow-lg"
+              className="bg-white border-2 border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-all"
             >
-              <div className="flex flex-col justify-center h-[240px]">
+              <div className="flex justify-center items-center h-[180px]">
                 <Image
                   src={award.src}
                   alt={award.name}
-                  height={180}
                   width={150}
-                  className="m-4 mx-auto"
+                  height={150}
+                  className="object-contain"
                 />
               </div>
-              <h3 className="text-orange-400 text-2xl font-semibold text-center pb-8">
+              <h3 className="text-orange-500 text-xl md:text-2xl font-semibold text-center mt-6">
                 {award.description}
               </h3>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Companies Carousel Section */}
-      <h1 className="text-4xl text-gray-700 text-center mt-40">
-        Trusted By Global Brands
-      </h1>
+        {/* Trusted Brands Heading */}
+        <h2 className="text-center text-3xl md:text-4xl text-gray-800 mb-10">
+          Trusted by Global Brands
+        </h2>
 
-      <div
-        className="flex max-w-[80vw] mx-auto overflow-hidden mt-10"
-        onMouseEnter={() => {
-          setIsHovered(true);
-        }}
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }}
-      >
+        {/* Logo Carousel */}
         <div
-          className={`grid grid-cols-5 gap-4 w-[100vw] shrink-0 h-[150px] mx-2 animate-scroll ${
-            isHovered && "animation-paused"
-          }`}
+          className="flex overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          {CompanyLogos.map((logo) => (
+          {[...Array(2)].map((_, index) => (
             <div
-              key={logo.id}
-              className={`flex flex-col justify-center border-2 border-gray-300 h-full place-items-center rounded-lg`}
+              key={index}
+              className={`flex justify-between flex-shrink-0 min-w-full gap-6 mx-3 animate-scroll ${
+                isHovered ? "animation-paused" : ""
+              }`}
             >
-              <Image
-                src={logo.src}
-                alt={logo.name}
-                className={`h-[${logo.height}px] w-[200px]`}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/*Repeated logos for seamless effect*/}
-        <div
-          className={`grid grid-cols-5 gap-4 w-[100vw] shrink-0 h-[150px] mx-2 animate-scroll ${
-            isHovered && "animation-paused"
-          }`}
-        >
-          {CompanyLogos.map((logo) => (
-            <div
-              key={logo.id}
-              className={`flex flex-col justify-center border-2 border-gray-300 h-full place-items-center rounded-lg`}
-            >
-              <Image
-                src={logo.src}
-                alt={logo.name}
-                className={`h-[${logo.height}px] w-[200px]`}
-              />
+              {CompanyLogos.map((logo) => (
+                <div
+                  key={`${index}-${logo.id}`}
+                  className="flex items-center justify-center border border-gray-300 bg-white rounded-lg shadow-sm w-40 sm:w-48 md:w-56 h-28 flex-shrink-0 p-3"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={160}
+                    height={logo.height}
+                    style={{
+                      height: `${logo.height}px`,
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
       </div>
 
-      <style jsx>
-        {`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-101%);
-            }
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
           }
+          100% {
+            transform: translateX(-102%);
+          }
+        }
 
-          .animate-scroll {
-            animation: scroll 11s linear infinite;
-          }
+        .animate-scroll {
+          animation: scroll 10s linear infinite;
+        }
 
-          .animation-paused {
-            animation-play-state: paused;
-          }
-        `}
-      </style>
+        .animation-paused {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };
