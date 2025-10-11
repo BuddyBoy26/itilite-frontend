@@ -9,18 +9,22 @@ type YtVideoProps = {
 
 const YtVideo: React.FC<YtVideoProps> = ({ url, title }) => {
   return (
-    <section className="w-full flex justify-center my-12 px-4">
-      <div className="w-full max-w-4xl"> {/* max width adjusted here */}
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">{title}</h2>
+    <section className="w-full flex justify-center my-8 sm:my-12 px-3 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl">
+        {/* Title */}
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6 text-center text-gray-900">
+          {title}
+        </h2>
 
-        {/* Responsive aspect ratio for video */}
-        <div className="relative" style={{ paddingTop: "56.25%" }}> {/* 16:9 Aspect Ratio */}
+        {/* Video Wrapper with 16:9 aspect ratio */}
+        <div className="relative w-full overflow-hidden rounded-lg shadow-lg bg-black aspect-video">
           <iframe
             src={url.replace("watch?v=", "embed/")}
             title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="absolute top-0 left-0 w-full h-full rounded-md shadow-lg"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full border-0"
           ></iframe>
         </div>
       </div>

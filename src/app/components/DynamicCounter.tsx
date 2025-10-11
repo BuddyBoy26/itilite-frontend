@@ -17,15 +17,20 @@ const countersData: CounterItem[] = [
 
 const DynamicCounter: React.FC = () => {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+    <section className="py-10 sm:py-12 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 text-gray-800">
           Key Metrics
         </h2>
 
-        <div className="flex justify-around flex-wrap gap-6">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {countersData.map((item, i) => (
-            <CounterBox key={i} value={item.value} label={item.label} suffix={item.suffix} />
+            <CounterBox
+              key={i}
+              value={item.value}
+              label={item.label}
+              suffix={item.suffix}
+            />
           ))}
         </div>
       </div>
@@ -61,12 +66,14 @@ const CounterBox: React.FC<CounterBoxProps> = ({ value, label, suffix }) => {
   }, [value]);
 
   return (
-    <div className="flex flex-col items-center p-4 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl shadow-md min-w-[120px]">
-      <div className="text-4xl font-extrabold text-blue-600">
+    <div className="flex flex-col items-center justify-center p-4 sm:p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl shadow-md min-w-[130px] sm:min-w-[160px] md:min-w-[180px] w-full max-w-[220px] transition-transform duration-300 hover:scale-[1.03]">
+      <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600">
         {count}
         {suffix}
       </div>
-      <div className="text-sm text-gray-700 mt-1 text-center">{label}</div>
+      <div className="text-xs sm:text-sm md:text-base text-gray-700 mt-2 text-center leading-snug">
+        {label}
+      </div>
     </div>
   );
 };

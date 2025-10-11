@@ -11,7 +11,7 @@ type Award = {
 
 const awards: Award[] = [
   {
-    imageUrl: "/g2-india.png", // You should add these files to public/awards/
+    imageUrl: "/g2-india.png",
     imageAlt: "G2 Top 50 Indian Companies 2024",
     title: "Best Software Awards 2024",
   },
@@ -33,24 +33,25 @@ const awards: Award[] = [
 ];
 
 const AwardsSection: React.FC = () => (
-  <section className="max-w-7xl mx-auto py-16 px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-serif font-medium mb-12">
+  <section className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 md:px-8 text-center">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-medium mb-8 sm:mb-12">
       Why users love us?
     </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
       {awards.map((award) => (
         <div
           key={award.title}
-          className="bg-white rounded-xl border border-gray-200 flex flex-col items-center justify-center py-10 px-6 shadow-sm min-h-[350px]"
+          className="bg-white rounded-xl border border-gray-200 flex flex-col items-center justify-center py-8 sm:py-10 px-4 sm:px-6 shadow-sm min-h-[300px] sm:min-h-[350px] transition-transform duration-300 hover:scale-[1.02]"
         >
           <Image
             src={award.imageUrl}
             alt={award.imageAlt}
-            width={140}
-            height={140}
-            className="mb-6 object-contain"
+            width={120}
+            height={120}
+            className="mb-4 sm:mb-6 object-contain w-28 sm:w-32 h-auto"
           />
-          <p className="text-lg text-orange-500 font-semibold">
+          <p className="text-base sm:text-lg text-orange-500 font-semibold leading-snug">
             {award.title}
           </p>
         </div>
