@@ -67,6 +67,8 @@ export default function FeatureCarousel() {
                   : "text-gray-700 hover:text-black"
               }`}
               onClick={() => setActiveIndex(index)}
+              aria-label={`Show slide: ${item.title}`}
+              aria-current={activeIndex === index ? "true" : undefined}
             >
               {item.title}
             </button>
@@ -86,7 +88,10 @@ export default function FeatureCarousel() {
             <p className="mt-3 sm:mt-4 text-gray-600 text-sm sm:text-base max-w-md mx-auto md:mx-0">
               {carouselItems[activeIndex].description}
             </p>
-            <button className="mt-5 sm:mt-6 px-5 sm:px-6 py-2.5 sm:py-3 bg-orange-50 text-black font-medium rounded-lg border border-orange-200 shadow-md hover:shadow-lg transition">
+            <button
+              className="mt-5 sm:mt-6 px-5 sm:px-6 py-2.5 sm:py-3 bg-orange-50 text-black font-medium rounded-lg border border-orange-200 shadow-md hover:shadow-lg transition"
+              aria-label={carouselItems[activeIndex].button}
+            >
               {carouselItems[activeIndex].button} →
             </button>
           </div>
