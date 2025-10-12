@@ -1,32 +1,36 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import G2India from "../../../public/g2-india.webp";
+import G2HighPerformer from "../../../public/ExpenseManagement_HighPerformer_India_HighPerformer.webp";
+import GetAppCategoryLeader from "../../../public/GA-Badge-CategoryLeaders-2023-FullColor-Positive-1-1.webp";
+import G2MomentumLeader from "../../../public/TravelManagement_MomentumLeader_Leader.webp";
 
 type Award = {
-  imageUrl: string;
+  imageUrl: StaticImageData;
   imageAlt: string;
   title: string;
 };
 
 const awards: Award[] = [
   {
-    imageUrl: "/g2-india.png",
+    imageUrl: G2India,
     imageAlt: "G2 Top 50 Indian Companies 2024",
     title: "Best Software Awards 2024",
   },
   {
-    imageUrl: "/ExpenseManagement_HighPerformer_India_HighPerformer.png",
+    imageUrl: G2HighPerformer,
     imageAlt: "G2 High Performer Spring 2024",
     title: "High Performer - Spring 2024",
   },
   {
-    imageUrl: "/GA-Badge-CategoryLeaders-2023-FullColor-Positive-1-1.webp",
+    imageUrl: GetAppCategoryLeader,
     imageAlt: "GetApp Category Leader 2023",
     title: "Category Leader - GetApp 2023",
   },
   {
-    imageUrl: "/TravelManagement_MomentumLeader_Leader.png",
+    imageUrl: G2MomentumLeader,
     imageAlt: "G2 Momentum Leader Spring 2024",
     title: "Momentum Leader - Spring 2024",
   },

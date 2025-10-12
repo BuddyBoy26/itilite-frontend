@@ -1,8 +1,8 @@
 import Image from "next/image";
-import TravelBooking from "../../../public/TravelBooking.jpg";
-import PolicyCompliance from "../../../public/policyCompliance.png";
-import ExpenseManagement from "../../../public/ExpenseManagement.png";
-import RealTime from "../../../public/Real-Time.png";
+import TravelBooking from "../../../public/TravelBooking.webp";
+import PolicyCompliance from "../../../public/PolicyCompliance.webp";
+import ExpenseManagement from "../../../public/ExpenseManagement.webp";
+import RealTime from "../../../public/Real-Time.webp";
 
 export default function FeaturesSection() {
   const features = [

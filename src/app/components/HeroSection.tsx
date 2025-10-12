@@ -1,9 +1,9 @@
 "use client";
 import HeroImage from "../../../public/HeroSectionWomen.webp";
 import CarouselImage1 from "../../../public/Carousel_img01.svg";
-import CarouselImage2 from "../../../public/Carousel_img02.png";
-import CarouselImage3 from "../../../public/Carousel_img03.png";
-import CarouselImage4 from "../../../public/Carousel_img04.png";
+import CarouselImage2 from "../../../public/Carousel_img02.webp";
+import CarouselImage3 from "../../../public/Carousel_img03.webp";
+import CarouselImage4 from "../../../public/Carousel_img04.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
