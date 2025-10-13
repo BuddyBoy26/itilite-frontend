@@ -65,6 +65,7 @@ function HeroSection() {
               alt="Travel Illustration"
               className="w-full h-auto object-contain"
               priority
+              fetchPriority="high"
             />
           </div>
         </div>
