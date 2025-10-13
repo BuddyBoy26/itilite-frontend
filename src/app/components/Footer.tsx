@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import ItiliteLogo from "../../../public/itilite-logo.svg";
-import ItiliteImage1 from "../../../public/itilite-footer-1.svg";
-import ItiliteImage2 from "../../../public/itilite-footer-2.svg";
-import ItiliteImage3 from "../../../public/itilite-footer-3.svg";
+import ItiliteLogo from "../../../public/itilite-logo.webp";
+import ItiliteImage1 from "../../../public/itilite-footer-1.webp";
+import ItiliteImage2 from "../../../public/itilite-footer-2.webp";
+import ItiliteImage3 from "../../../public/itilite-footer-3.webp";
 import AppStore from "../../../public/appstore-badge.webp";
 import GooglePlay from "../../../public/googleplay-badge.webp";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";

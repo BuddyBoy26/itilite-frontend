@@ -1,15 +1,15 @@
 "use client";
 import HeroImage from "../../../public/HeroSectionWomen.webp";
-import CarouselImage1 from "../../../public/Carousel_img01.svg";
+import CarouselImage1 from "../../../public/Carousel_img01.webp";
 import CarouselImage2 from "../../../public/Carousel_img02.webp";
 import CarouselImage3 from "../../../public/Carousel_img03.webp";
 import CarouselImage4 from "../../../public/Carousel_img04.webp";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const carouselItems = [
     { logo: CarouselImage1, alt: "Company 1" },
@@ -19,13 +19,13 @@ function HeroSection() {
   ];
 
   // Auto-scroll carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, [carouselItems.length]);
+  //   return () => clearInterval(interval);
+  // }, [carouselItems.length]);
 
   return (
     <>
@@ -76,9 +76,9 @@ function HeroSection() {
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
-              transform: `translateX(-${
-                currentSlide * (100 / Math.min(carouselItems.length, 6))
-              }%)`,
+              // transform: `translateX(-${
+              //   currentSlide * (100 / Math.min(carouselItems.length, 6))
+              // }%)`,
             }}
           >
             {carouselItems.concat(carouselItems).map((item, index) => (

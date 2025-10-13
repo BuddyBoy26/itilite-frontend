@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

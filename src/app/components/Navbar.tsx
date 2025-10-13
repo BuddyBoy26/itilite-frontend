@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Logo from "../../../public/Logo-2.webp";
 
 type DropdownItem = {
   label: string;
@@ -30,7 +31,10 @@ const menus = {
     [
       { label: "By Solution", href: "#", header: true },
       { label: "Centralize Payments", href: "/solutions/centralize-payments" },
-      { label: "Credit Card Authorization", href: "/solutions/credit-card-authorization" },
+      {
+        label: "Credit Card Authorization",
+        href: "/solutions/credit-card-authorization",
+      },
     ],
     [
       { label: "By Service", href: "#", header: true },
@@ -63,7 +67,11 @@ export default function Navbar() {
                     {item.label}
                   </span>
                 ) : (
-                  <Link key={i} href={item.href} className="hover:text-orange-600">
+                  <Link
+                    key={i}
+                    href={item.href}
+                    className="hover:text-orange-600"
+                  >
                     {item.label}
                   </Link>
                 )
@@ -90,52 +98,58 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <Image src="/Logo-2.svg" alt="Company Logo" width={120} height={40} priority />
+          <Image
+            src={Logo}
+            alt="Company Logo"
+            width={120}
+            height={40}
+            priority
+          />
         </Link>
 
         {/* Desktop Navbar */}
         <div className="hidden md:flex space-x-8 text-gray-700 font-medium relative">
           {["Overview", "Products", "Solutions", "Pricing", "Resources"].map(
-  (title) => (
-    <div
-      key={title}
-      className="relative flex items-center"
-      onMouseEnter={() => setDropdown(title)}
-      onMouseLeave={() => setDropdown("")}
-    >
-      {title === "Pricing" ? (
-        <Link
-          href="/pricing"
-          className={`px-2 py-1 ${
-            dropdown === title ? "text-orange-600" : "text-gray-700"
-          }`}
-        >
-          {title}
-        </Link>
-      ) : (
-        <>
-          <button
-            type="button"
-            className={`flex items-center gap-1 px-2 py-1 ${
-              dropdown === title ? "text-orange-600" : "text-gray-700"
-            }`}
-          >
-            {title}
-            <ChevronDown
-              size={16}
-              className={`transition-transform duration-200 ${
-                dropdown === title ? "rotate-180" : "rotate-0"
-              }`}
-            />
-          </button>
-          {/* Dropdown */}
-          {dropdown === title && renderDropdown(title as keyof typeof menus)}
-        </>
-      )}
-    </div>
-  )
-)}
-
+            (title) => (
+              <div
+                key={title}
+                className="relative flex items-center"
+                onMouseEnter={() => setDropdown(title)}
+                onMouseLeave={() => setDropdown("")}
+              >
+                {title === "Pricing" ? (
+                  <Link
+                    href="/pricing"
+                    className={`px-2 py-1 ${
+                      dropdown === title ? "text-orange-600" : "text-gray-700"
+                    }`}
+                  >
+                    {title}
+                  </Link>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className={`flex items-center gap-1 px-2 py-1 ${
+                        dropdown === title ? "text-orange-600" : "text-gray-700"
+                      }`}
+                    >
+                      {title}
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-200 ${
+                          dropdown === title ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                    </button>
+                    {/* Dropdown */}
+                    {dropdown === title &&
+                      renderDropdown(title as keyof typeof menus)}
+                  </>
+                )}
+              </div>
+            )
+          )}
         </div>
 
         {/* Right Buttons */}
@@ -175,7 +189,9 @@ export default function Navbar() {
           <Link href="/products/expense-management">Expense Management</Link>
           <Link href="/products/corporate-card">Corporate Card</Link>
           <Link href="/solutions/role/cfos">For CFOs</Link>
-          <Link href="/solutions/role/travel-managers">For Travel Managers</Link>
+          <Link href="/solutions/role/travel-managers">
+            For Travel Managers
+          </Link>
           <Link href="/solutions/centralize-payments">Centralize Payments</Link>
           <Link href="/solutions/credit-card-authorization">
             Credit Card Authorization
@@ -183,7 +199,9 @@ export default function Navbar() {
           <Link href="/solutions/visa-assistance">Visa Assistance</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/resources/blog">Blog</Link>
-          <Link href="/resources/guides-templates">Free Guides & Templates</Link>
+          <Link href="/resources/guides-templates">
+            Free Guides & Templates
+          </Link>
           <Link href="/resources/case-studies">Case Studies</Link>
           <Link href="/login" className="block">
             Login

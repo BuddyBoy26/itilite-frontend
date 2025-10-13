@@ -15,9 +15,9 @@ const Home = () => {
       <HeroSection />
       <FeatureCarousel />
       <FeaturesSection />
-      <YtVideo 
-         url="https://www.youtube.com/embed/JiCxfStLSEA?si=C_3QdFwYL9HRbgQn" 
-        title="Empower users to book the next business trip on itilite. Watch how it works!"                  
+      <YtVideo
+        url="https://www.youtube.com/embed/JiCxfStLSEA?si=C_3QdFwYL9HRbgQn"
+        title="Empower users to book the next business trip on itilite. Watch how it works!"
       />
       <Testimonials />
       <DynamicCounter />
@@ -25,12 +25,13 @@ const Home = () => {
       <TitleContent
         title="We integrate with all major systems"
         content="We integrate with leading enterprise systems across ERP, HRMS and SSO systems"
-        imageUrl="/TitleContent01.svg" />
+        imageUrl="/TitleContent01.webp"
+      />
       <TitleContent02
         title="Transparent pricing for corporate travel management"
         contentTop="Tired of monthly subscriptions and hidden fees weighing down your travel budget? Break Free & Get Crystal Clear Pricing."
         contentBottom="Pay only when you book a trip – no additional or hidden costs. Spend less time managing subscriptions and more time planning successful business trips."
-        />
+      />
       <AwardsSection />
     </>
   );

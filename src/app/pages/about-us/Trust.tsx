@@ -1,14 +1,14 @@
 "use client";
 
-import BestSoftware from "../../../../public/best-software-award.png";
-import HighPerformer from "../../../../public/high-performer-award.png";
+import BestSoftware from "../../../../public/best-software-award.webp";
+import HighPerformer from "../../../../public/high-performer-award.webp";
 import CategoryLeader from "../../../../public/category-leader-award.webp";
-import MomentumLeader from "../../../../public/momentum-leader-award.png";
-import TVS from "../../../../public/tvs-motor-logo.jpg";
-import Intellect from "../../../../public/intellect-designs-logo.png";
-import Infotech from "../../../../public/itc-infotech-logo.svg";
-import Datamatics from "../../../../public/datamatics-logo.png";
-import Fashinza from "../../../../public/fashinza-logo.png";
+import MomentumLeader from "../../../../public/momentum-leader-award.webp";
+import TVS from "../../../../public/tvs-motor-logo.webp";
+import Intellect from "../../../../public/intellect-designs-logo.webp";
+import Infotech from "../../../../public/Carousel_img01.webp";
+import Datamatics from "../../../../public/datamatics-logo.webp";
+import Fashinza from "../../../../public/fashinza-logo.webp";
 import Image from "next/image";
 import { useState } from "react";
 

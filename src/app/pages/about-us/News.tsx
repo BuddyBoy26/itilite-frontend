@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import News1 from "../../../../public/news-1-image.png";
-import News2 from "../../../../public/news-2-image.png";
-import News3 from "../../../../public/news-3-image.png";
+import News1 from "../../../../public/news-1-image.webp";
+import News2 from "../../../../public/news-2-image.webp";
+import News3 from "../../../../public/news-3-image.webp";
 
 interface NewsCard {
   id: number;

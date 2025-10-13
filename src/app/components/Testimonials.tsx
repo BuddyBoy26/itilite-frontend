@@ -38,12 +38,6 @@ export default function Testimonials() {
               key={i}
               className="flex flex-col sm:flex-row items-center sm:items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300"
             >
-              {/* Avatar */}
-              <img
-                src={t.avatar}
-                alt={t.name}
-                className="h-16 w-16 rounded-full object-cover mb-4 sm:mb-0 sm:mr-5 flex-shrink-0"
-              />
 
               {/* Text */}
               <div className="text-center sm:text-left">
