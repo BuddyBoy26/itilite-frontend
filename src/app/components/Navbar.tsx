@@ -158,6 +158,7 @@ export default function Navbar() {
         <button
           onClick={() => setDropdown(dropdown === "mobile" ? "" : "mobile")}
           className="md:hidden text-gray-700 focus:outline-none"
+          aria-label="Open mobile menu"
         >
           ☰
         </button>

@@ -17,7 +17,7 @@ const Story = () => {
             <span className="text-base">
               itilite (Pronounced as it- ee - laa - it)
             </span>
-            <button className="text-orange-500 hover:text-orange-600 transition-colors">
+            <button className="text-orange-500 hover:text-orange-600 transition-colors" aria-label="Play pronunciation">
               <Volume2 className="w-5 h-5" />
             </button>
           </div>

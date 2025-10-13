@@ -4,8 +4,8 @@ import ItiliteLogo from "../../../public/itilite-logo.svg";
 import ItiliteImage1 from "../../../public/itilite-footer-1.svg";
 import ItiliteImage2 from "../../../public/itilite-footer-2.svg";
 import ItiliteImage3 from "../../../public/itilite-footer-3.svg";
-import AppStore from "../../../public/appstore-badge.png";
-import GooglePlay from "../../../public/googleplay-badge.png";
+import AppStore from "../../../public/appstore-badge.webp";
+import GooglePlay from "../../../public/googleplay-badge.webp";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Navigation columns */}
           <div className="md:col-span-1 lg:col-span-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">Product</h3>
+              <h2 className="text-lg font-semibold text-gray-900">Product</h2>
               <ul className="mt-3 space-y-2 text-sm">
                 {productLinks.map((l) => (
                   <li key={l} className="hover:text-gray-800">
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">Company</h3>
+              <h2 className="text-lg font-semibold text-gray-900">Company</h2>
               <ul className="mt-3 space-y-2 text-sm">
                 {companyLinks.map((l) => (
                   <li key={l} className="hover:text-gray-800">
@@ -76,7 +76,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">Resources</h3>
+              <h2 className="text-lg font-semibold text-gray-900">Resources</h2>
               <ul className="mt-3 space-y-2 text-sm">
                 {resourcesLinks.map((l) => (
                   <li key={l} className="hover:text-gray-800">
@@ -87,7 +87,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">Contact</h3>
+              <h2 className="text-lg font-semibold text-gray-900">Contact</h2>
               <ul className="mt-3 space-y-2 text-sm">
                 {contactLinks.map((l) => (
                   <li key={l} className="hover:text-gray-800">
@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Right: Social + Downloads */}
           <div className="flex flex-col items-start space-y-6">
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">Follow us</h4>
+              <h3 className="text-lg font-semibold text-gray-900">Follow us</h3>
               <div className="mt-3 flex space-x-3">
                 <Link
                   href="https://www.linkedin.com/company/itilite"
@@ -128,7 +128,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h5 className="text-lg font-semibold text-gray-900">Download on</h5>
+              <h4 className="text-lg font-semibold text-gray-900">Download on</h4>
               <div className="mt-3 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
                 <Link href="https://apps.apple.com/us/app/itilite/id1484326787">
                   <Image src={AppStore} alt="App Store" width={150} height={50} />
@@ -140,7 +140,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h6 className="text-gray-900 font-semibold">Contact us</h6>
+              <h5 className="text-gray-900 font-semibold">Contact us</h5>
               <Link href="mailto:contact@itilite.com" className="text-orange-600 text-sm hover:underline">
                 contact@itilite.com
               </Link>
